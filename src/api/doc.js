@@ -7,3 +7,12 @@ export function getList (data) {
     method: `get`
   })
 }
+
+
+// 修改数据
+export function delDoc (data) {
+  return request({
+    url: `/doc/delData/${data.id}`,
+    method: 'delete'
+  })
+}

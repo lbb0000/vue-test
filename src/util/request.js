@@ -8,6 +8,7 @@ if (process.env.NODE_ENV === 'development') {
   axios.defaults.baseURL = 'http://webs.yr.dev.q1.com/'
 }
 axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded; charset=utf-8'
+axios.defaults.withCredentials = true
 
 let service = axios.create({
   timeout: 500000
@@ -18,6 +19,8 @@ service.interceptors.request.use(config => {
   if (Object.prototype.toString.call(config.data) !== '[object FormData]') {
     config.data = qs.stringify(config.data)
   }
+  config.headers['x-token']=''
+  config.headers['x-user']=''
   return config
 })
 
