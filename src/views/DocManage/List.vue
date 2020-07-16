@@ -39,8 +39,8 @@ export default {
         pageSize: 10,
         pageIndex: 1,
         total: 0,
-        projectId:1,
-        queryText:''
+        projectId: 1,
+        queryText: ''
       },
       tableData: []
     }
@@ -52,7 +52,7 @@ export default {
     getListFn () {
       getList(this.queryData).then(res => {
         console.log(res.data.length)
-        this.tableData=res.data;
+        this.tableData = res.data
       })
     },
     gotoEdit (id) {

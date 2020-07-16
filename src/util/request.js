@@ -19,8 +19,8 @@ service.interceptors.request.use(config => {
   if (Object.prototype.toString.call(config.data) !== '[object FormData]') {
     config.data = qs.stringify(config.data)
   }
-  config.headers['x-token']=''
-  config.headers['x-user']=''
+  config.headers['x-token'] = ''
+  config.headers['x-user'] = ''
   return config
 })
 
