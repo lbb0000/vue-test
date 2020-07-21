@@ -14,3 +14,11 @@ export function delDoc (data) {
     method: 'delete'
   })
 }
+// 添加文案管理项
+export function addDoc (data) {
+  return request({
+    url: '/doc/add',
+    method: 'post',
+    data: data
+  })
+}

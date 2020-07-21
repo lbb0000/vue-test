@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { Message } from 'element-ui'
 import qs from 'qs'
-
+import {getCookie} from '@/util/cookies'
 if (process.env.NODE_ENV === 'development') {
   axios.defaults.baseURL = 'http://webs.yr.dev.q1.com/'
 } else {
@@ -19,8 +19,8 @@ service.interceptors.request.use(config => {
   if (Object.prototype.toString.call(config.data) !== '[object FormData]') {
     config.data = qs.stringify(config.data)
   }
-  config.headers['x-token'] = ''
-  config.headers['x-user'] = ''
+  config.headers['x-token'] = getCookie('login_token')
+  config.headers['x-user'] = getCookie('userName')
   return config
 })
 

@@ -32,7 +32,13 @@ export default new Router({
         name: 'doc-list',
         component: () => import('@/views/DocManage/List'),
         meta: { title: '文案列表', icon: 'role', isCommon: false }
-      }]
+      }, {
+        path: 'add',
+        name: 'doc-add',
+        component: () => import('@/views/DocManage/Add'),
+        meta: { title: '添加文案管理项', icon: 'role', isCommon: false }
+      },
+      ]
     }
   ]
 })
