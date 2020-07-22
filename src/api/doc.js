@@ -22,3 +22,10 @@ export function addDoc (data) {
     data: data
   })
 }
+// 根据ID获取文案管理内容
+export function getDataForId (id) {
+  return request({
+    url: `/doc/getDataForId?id=${id}`,
+    method: 'get'
+  })
+}

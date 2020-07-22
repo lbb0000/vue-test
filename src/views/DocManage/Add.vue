@@ -15,27 +15,27 @@
 <script>
 import {addDoc} from '@/api/doc'
 export default {
-  name: "doc-add",
+  name: 'doc-add',
   data () {
     return {
-      formData:{
+      formData: {
         title: '',
         url: '',
-        projectId:1
+        projectId: 1
       }
     }
   },
   methods: {
     addData () {
-      addDoc (this.formData).then(res =>{
+      addDoc(this.formData).then(res => {
         if (res.state) {
           this.$message({
-            message:'添加成功',
+            message: '添加成功',
             type: 'success'
           })
           this.$emit('flush')
         }
-      } )
+      })
     }
   }
 }

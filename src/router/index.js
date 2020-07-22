@@ -37,7 +37,12 @@ export default new Router({
         name: 'doc-add',
         component: () => import('@/views/DocManage/Add'),
         meta: { title: '添加文案管理项', icon: 'role', isCommon: false }
-      },
+      }, {
+        path: 'edit/:id',
+        name: 'doc-edit',
+        component: () => import('@/views/DocManage/Edit'),
+        meta: { title: '编辑文案管理项', icon: 'role', isCommon: false }
+      }
       ]
     }
   ]

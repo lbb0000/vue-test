@@ -58,8 +58,8 @@ export default {
         queryText: '',
         pageIndex: 1,
         pageSize: 10,
-        projectId:1,
-        total:0,
+        projectId: 1,
+        total: 0
       },
       tableData: [],
       addDialog: false
@@ -76,7 +76,7 @@ export default {
       })
     },
     gotoEdit (id) {
-      console.log(id)
+      this.$router.push({path: `/doc/edit/${id}`})
     },
     delData (id) {
       delDoc({id}).then(() => {
@@ -88,14 +88,14 @@ export default {
       })
     },
     flushList () {
-      this.getListFn();
-      this.addDialog = false;
+      this.getListFn()
+      this.addDialog = false
     },
-    handleSizeChange(val) {
+    handleSizeChange (val) {
       this.queryData.pageSize = val
       this.getListFn()
     },
-    handleCurrentChange(val) {
+    handleCurrentChange (val) {
       this.queryData.pageIndex = val
       this.getListFn()
     }

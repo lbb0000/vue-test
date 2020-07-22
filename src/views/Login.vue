@@ -1,25 +1,27 @@
 <template>
-  <div style="display: flex;justify-content: center;margin-top: 150px">
-    <el-row type="flex" justify="center">
-      登录
-    </el-row>
-      <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
-        <el-row type="flex" justify="center">
-          <el-form-item label="账号" prop="userName">
-            <el-input v-model.number="ruleForm.userName"></el-input>
-          </el-form-item>
-        </el-row>
-        <el-row type="flex" justify="center">
-          <el-form-item label="密码" prop="password">
-            <el-input type="password" v-model="ruleForm.password" autocomplete="off"></el-input>
-          </el-form-item>
-        </el-row>
-        <el-row type="flex" justify="center">
-          <el-form-item>
-            <el-button type="primary" @click="submitForm('ruleForm')">登录</el-button>
-          </el-form-item>
-        </el-row>
-      </el-form>
+  <div class="bg">
+    <div style="width:400px;margin:0 auto;">
+      <el-row>
+        <h1>网站管理系统</h1>
+      </el-row>
+        <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
+          <el-row>
+            <el-form-item label="账号" prop="userName">
+              <el-input v-model.number="ruleForm.userName"></el-input>
+            </el-form-item>
+          </el-row>
+          <el-row>
+            <el-form-item label="密码" prop="password">
+              <el-input type="password" v-model="ruleForm.password" autocomplete="off"></el-input>
+            </el-form-item>
+          </el-row>
+          <el-row>
+            <el-form-item>
+              <el-button type="primary" @click="submitForm('ruleForm')">登录</el-button>
+            </el-form-item>
+          </el-row>
+        </el-form>
+    </div>
   </div>
 </template>
 
@@ -74,5 +76,12 @@ export default {
 </script>
 
 <style scoped>
-
+  .bg{
+    display: flex;
+    width: 100%;
+    height:100%;
+    justify-content: center;
+    align-items:center;
+  }
+  h1{text-align: center;margin-bottom:40px;}
 </style>
