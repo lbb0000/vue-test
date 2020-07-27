@@ -2,7 +2,7 @@
   <div class="bg">
     <div style="width:400px;margin:0 auto;">
       <el-row>
-        <h1>网站管理系统</h1>
+        <h1>网站管理系统1</h1>
       </el-row>
         <el-form :model="ruleForm" status-icon :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
           <el-row>
