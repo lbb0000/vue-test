@@ -61,10 +61,10 @@ export default {
         title: '',
         url: '',
         id: '',
-        detail:{}
+        detail: {}
       },
       apiUrl: '',
-      apiDomain:''
+      apiDomain: ''
     }
   },
   activated () {
