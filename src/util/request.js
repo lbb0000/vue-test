@@ -3,9 +3,9 @@ import { Message } from 'element-ui'
 import qs from 'qs'
 import {getCookie} from '@/util/cookies'
 if (process.env.NODE_ENV === 'development') {
-  axios.defaults.baseURL = 'http://webs.yr.dev.q1.com/'
+  axios.defaults.baseURL = 'http://webs.yr.dev.q1.com/api'
 } else {
-  axios.defaults.baseURL = 'http://webs.yr.dev.q1.com/'
+  axios.defaults.baseURL = 'http://webs.yr.dev.q1.com/api'
 }
 axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded; charset=utf-8'
 axios.defaults.withCredentials = true

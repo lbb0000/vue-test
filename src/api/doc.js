@@ -14,7 +14,7 @@ export function delDoc (data) {
     method: 'delete'
   })
 }
-// 添加文案管理项
+// 添加
 export function addDoc (data) {
   return request({
     url: '/doc/add',
@@ -27,5 +27,21 @@ export function getDataForId (id) {
   return request({
     url: `/doc/getDataForId?id=${id}`,
     method: 'get'
+  })
+}
+// 上传示意图
+export function uploadImg (data) {
+  return request({
+    url: '/doc/uploadImg',
+    method: 'post',
+    data: data
+  })
+}
+// 修改数据
+export function modifData (data) {
+  return request({
+    url: `/doc/modifData`,
+    method: 'post',
+    data: data
   })
 }

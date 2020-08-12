@@ -44,6 +44,17 @@ export default new Router({
         meta: { title: '编辑文案管理项', icon: 'role', isCommon: false }
       }
       ]
+    },
+    {
+      path: '/log',
+      component: Layout,
+      meta: { title: '日志列表', icon: 'role', isCommon: false },
+      children: [{
+        path: 'list',
+        name: 'log-list',
+        component: () => import('@/views/Log/List'),
+        meta: { title: '日志列表', icon: 'role', isCommon: false }
+      }]
     }
   ]
 })
